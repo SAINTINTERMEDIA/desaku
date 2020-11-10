@@ -82,8 +82,19 @@
                                         </div>
                                         SK Bersih Diri
                                     </a>
+                                    <a class="nav-link collapsed" href="/pkk">
+                                        <div class="sb-nav-link-icon"><i class="fa fa-envelope-open" aria-hidden="true"></i>
+                                        </div>
+                                        PKK
+                                    </a>
+                                    <a class="nav-link collapsed" href="/karangtaruna">
+                                        <div class="sb-nav-link-icon"><i class="fa fa-envelope-open" aria-hidden="true"></i>
+                                        </div>
+                                        Karang Taruna
+                                    </a>
                                 </nav>
                             </div>
+                            
                     @endif
                     @if (Auth::user()->is_admin == '2'||Auth::user()->is_admin == '0' )
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseberita" aria-expanded="false" aria-controls="collapsePages">
@@ -140,21 +151,26 @@
                                         </nav>
                                     </div>
 
-                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesKATAR" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                    <div class="sb-nav-link-icon"><i class="fa fa-bookmark" aria-hidden="true"></i>
-                                    </div>
-                                    KATAR
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    <a class="nav-link collapsed" href="/katar">
+                                        <div class="sb-nav-link-icon"><i class="fa fa-envelope-open" aria-hidden="true"></i>
+                                        </div>
+                                        KATAR
                                     </a>
-                                    <div class="collapse" id="pagesKATAR" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="/login">Login</a>
-                                            <a class="nav-link" href="register.html">Register</a>
-                                            <a class="nav-link" href="password.html">Forgot Password</a>
-                                        </nav>
-                                    </div>
+                                    <a class="nav-link collapsed" href="/pkk">
+                                        <div class="sb-nav-link-icon"><i class="fa fa-envelope-open" aria-hidden="true"></i>
+                                        </div>
+                                        PKK
+                                    </a>
+                                    <a class="nav-link collapsed" href="/bumdes">
+                                        <div class="sb-nav-link-icon"><i class="fa fa-envelope-open" aria-hidden="true"></i>
+                                        </div>
+                                        BUMDES
+                                    </a>
                             </nav>
                         </div>
                         @endif
+
+                        
                         @if (Auth::user()->is_admin == '2' )
                         {{-- <div class="sb-sidenav-menu-heading">Master Admin</div> --}}
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="false" aria-controls="collapsePages">
@@ -183,6 +199,7 @@
                                     </nav>
                                 </div>
                             @endif
+
                             @if (Auth::user()->is_admin == '1')
                                     <div class="sb-sidenav-menu-heading">Defnaker
                                     </div>
@@ -199,6 +216,7 @@
                                                     </div>
                                                     Lihat Lamaran 
                                                 </a>
+                                                
 
                                                 <a class="nav-link" href="tables.html">
                                                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
@@ -218,17 +236,16 @@
                         <main>
                             <div class="container-fluid">
                                 <div class="row">
-                                              @yield('content')
-                                              @yield('cont')
-                                              @yield('createfam')
-                                            @yield('content_PDF')
+                                    @yield('content')
+                                    @yield('cont')
+                                    @yield('createfam')
+                                    @yield('content_PDF')
                                 </div>
-                               
+                            
                             </div>
                         </main>
                 </div>
-</div>
-</div>
+        </div>
     @endsection
 
 
