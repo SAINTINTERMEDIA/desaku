@@ -18,6 +18,7 @@ class CreatePemdesTable extends Migration
             $table->string('nik',30);
             $table->string('jabatan',30);
             $table->string('periode',30);
+            $table->datetime('tglentry');
             $table->timestamps();
         });
         
