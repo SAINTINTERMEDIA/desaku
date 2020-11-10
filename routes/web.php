@@ -119,6 +119,29 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 
+    //KARANG TARUNA (KATAR)
+    Route::get('/katar', 'katarController@index');
+    Route::get('/katarcreate','katarController@create');
+    Route::post('/katar', 'katarController@store');
+    Route::get('/katar/kataredit/{id}', 'katarController@edit');
+    Route::put('/katarupdate/{id}', 'katarController@update');
+    Route::get('/katar/hapus/{id}', 'katarController@delete');
+    
+    // PKK
+    Route::get('/pkk', 'PkkController@index');
+    Route::get('/pkkcreate','PkkController@create');
+    Route::post('/pkk', 'PkkController@store');
+    Route::get('/pkk/pkkedit/{id}', 'PkkController@edit');
+    Route::put('/pkkupdate/{id}', 'PkkController@update');
+    Route::get('/pkk/hapus/{id}', 'PkkController@delete');
+    
+    //BUMDES
+    Route::get('/bumdes', 'BumdesController@index');
+    Route::get('/bumdescreate','BumdesController@create');
+    Route::post('/bumdes', 'BumdesController@store');
+    Route::get('/bumdes/bumdesedit/{id}', 'BumdesController@edit');
+    Route::put('/bumdesupdate/{id}', 'BumdesController@update');
+    Route::get('/bumdes/hapus/{id}', 'BumdesController@delete');
 
 });
 
