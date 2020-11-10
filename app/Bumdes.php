@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Pkk extends Model
+class Bumdes extends Model
 {
     protected $table = "pemdes";
 
